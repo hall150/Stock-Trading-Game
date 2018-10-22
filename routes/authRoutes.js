@@ -11,4 +11,14 @@ module.exports = app => {
   );
   //second route handler w/ code auth to xchange for info - returns accessToken
   app.get ('/auth/google/callback', passport.authenticate ('google'));
+
+  // if signedon user goes to following route -lg out
+  app.get ('/api/logout', (req, res) => {
+    req.logout(); //when req - kills cookie
+    res.send(req.user); //confirmation
+  });
+
+  app.get ('/api/current_user', (req, res) => {
+    res.send (req.user);
+  });
 };
