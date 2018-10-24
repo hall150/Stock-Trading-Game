@@ -1,18 +1,26 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
   "engines": {
-    "node":"10.8.0",
+    "node": "10.8.0",
     "npm": "6.2.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "axios": "^0.18.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
   }
 }
