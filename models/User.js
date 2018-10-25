@@ -1,11 +1,8 @@
-const mongoose = require ('mongoose');
-const {Schema} = mongoose;
-// const Schema = mongoose.Schema; eqiv to 3
+const mongoose = require('mongoose');
+const { Schema } = mongoose; //  this is equal to const Schema = mongoose.Schema;
 
-const userSchema = new Schema ({
-  googleId: String,
-  name: String, 
+const userSchema = new Schema({
+  googleId: String
 });
 
-//model class
-mongoose.model ('users', userSchema);
+mongoose.model('users', userSchema);

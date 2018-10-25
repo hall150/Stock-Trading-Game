@@ -15,7 +15,8 @@ module.exports = app => {
   // if signedon user goes to following route -lg out
   app.get ('/api/logout', (req, res) => {
     req.logout(); //when req - kills cookie
-    res.send(req.user); //confirmation
+    es.redirect('/')
+    // res.send(req.user); //confirmation
   });
 
   app.get ('/api/current_user', (req, res) => {
